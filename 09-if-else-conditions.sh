@@ -6,7 +6,6 @@ than
 
     echo "Give number $NUMBER is less than 100"
     
-    else
-        
+     else
          echo "Given number $NUMBER is not less than 100"
-    fi
+      fi
