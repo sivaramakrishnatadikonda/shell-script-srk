@@ -2,4 +2,4 @@
 
 MOVIES=("HIT3" "#SINGLE" "PUSHPA2" "HAI" "MAD2")
 
-echo "1st movie name: ${Movies[1] }"
+echo "Forst movie name:  ${MOVIES[1]}"
