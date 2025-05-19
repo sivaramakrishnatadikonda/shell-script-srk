@@ -13,7 +13,7 @@ fi
 
 dnf list installed nginx
 
-if [ $? -ne 0]
+if [ $? -ne 0 ]
 
 then 
 
