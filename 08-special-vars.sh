@@ -7,4 +7,5 @@ echo "user name : $USER"
 echo "number of varaibles pass the script: $#"
 echo "home directory: $HOME"
 echo "pid: $$"
+sleep 10 &
 echo "backgroud pid: $!"
