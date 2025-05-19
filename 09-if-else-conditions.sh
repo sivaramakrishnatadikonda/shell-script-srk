@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NUMBER=100
+NUMBER=$1
 if [ $NUMBER -lt 100 ]
 than 
 
