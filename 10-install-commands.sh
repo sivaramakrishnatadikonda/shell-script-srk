@@ -31,8 +31,9 @@ else
      echo "Installing NGINX ..... FAILED"
     exit 1
 fi
+
 else 
    echo "NGINX is already installed....don't do anything"
-   exit 1
+
 
 fi
