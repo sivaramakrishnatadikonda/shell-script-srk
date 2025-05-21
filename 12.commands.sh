@@ -49,13 +49,35 @@ else
     
 fi
 
-dnf install mongodb-org -y 
+dnf install python3 -y
 
-VALIDATE $? "MONGODB"
+VALIDATE $? "PYTHON3"
 
 if [ $? -eq 0 ]
 then
-    echo "MONGODB installed sucessfully"
+    echo "PYTHON3 installed sucessfully"
 else
-    echo "MONGODB is already installed nothing to do"
+    echo "PYTHON3 is already installed nothing to do"
+fi 
+
+dnf install mysql -y
+
+VALIDATE $? "MYSQL"
+
+if [ $? -eq 0 ]
+then
+    echo "MYSQL installed sucessfully"
+else
+    echo "MYSQL is already installed nothing to do"
+fi 
+
+dnf install redis -y 
+
+VALIDATE $? "REDIS"
+
+if [ $? -eq 0 ]
+then
+    echo "REDIS installed sucessfully"
+else
+    echo "REDIS is already installed nothing to do"
 fi 
