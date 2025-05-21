@@ -49,7 +49,9 @@ else
 fi
 
 dnf install mongodb -y
+
 VALIDATE $? "MONGODB"
+
 if [ $? - eq 0 ]
 then 
   echo "MONGODB installation is successfully"
@@ -57,12 +59,14 @@ else
    echo "MONGODB installatioon is failed"
    exit 1
 fi
+
 else 
   echo "MONGODB already installed nothing to do"
 
 fi
 
 dnf install nodejs -y
+
 VALIDATE $? "NODEJS"
 
 if [ $? -eq 0 ]
