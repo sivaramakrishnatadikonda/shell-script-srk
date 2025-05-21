@@ -37,18 +37,6 @@ then
        
    fi     
 
-
-dnf install mongodb-org -y 
-
-VALIDATE $? "MONGODB"
-
-if [ $? - eq 0 ]
-then 
-  echo "MONGODB installation is successfully"
-else
-   echo "MONGODB already installed nothing to do"
-fi
-
 dnf install nodejs -y
 
 VALIDATE $? "NODEJS"
