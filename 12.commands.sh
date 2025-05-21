@@ -16,9 +16,9 @@ VALIDATE(){
 
 if [ $1 -eq 0 ]
 then 
-    echo  "Installed $2 is sucessfully"
+    echo  "Installed $4 is sucessfully"
 else  
-    echo "Installation $2 is failed"
+    echo "Installation $4 is failed"
     exit 1
 fi
 
