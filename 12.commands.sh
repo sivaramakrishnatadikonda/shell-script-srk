@@ -24,14 +24,8 @@ fi
 
 }
 
-dnf list install nginx
-dnf module list nodejs
-
-if [ $? -ne 0 ]
-then 
-    echo "NGNIX is not installed ..... please installed"
-   echo "NODEJS is not installed ..... please installed"
 dnf install nginx -y
+
 VALIDATE $? "NGINX"
 
 if [ $? -eq 0 ]
@@ -44,11 +38,6 @@ then
    fi     
 
 
-else
-    echo "NGINX is already  installed ....... nothing to do"
-
-fi
-
 dnf install mongodb-org -y 
 
 VALIDATE $? "MONGODB"
@@ -59,11 +48,6 @@ then
 else
    echo "MONGODB installatioon is failed"
    exit 1
-fi
-
-else 
-  echo "MONGODB already installed nothing to do"
-
 fi
 
 dnf install nodejs -y
@@ -78,6 +62,3 @@ else
     exit 1
 fi
 
-else 
-    echo "NODEJS is already installed nothing to do"
-fi
