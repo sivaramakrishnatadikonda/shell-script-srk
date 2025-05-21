@@ -12,6 +12,18 @@ else
 
 fi
 
+VALIDATE(){
+
+if [ $1 -eq 0 ]
+then 
+    echo  "Installed $2 is sucessfully"
+else  
+    echo "Installation $2 is failed"
+    exit 1
+fi
+
+}
+
 dnf list install nginx
 
 if [ $? -ne 0 ]
@@ -19,6 +31,7 @@ then
     echo "NGNIX is not installed ..... please installed"
 
 dnf install nginx -y
+VALIDATE $? "NGINX"
 
 if [ $? -eq 0 ]
 then
