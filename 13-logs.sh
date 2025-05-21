@@ -15,18 +15,18 @@ echo "Script started executing at : $(date)" | tee -a $LOG_FILE
 
 if [ $USERID -ne 0 ]
 then
-     echo  -e "$R ERROR: code running with root access $N" | tee -a $LOG_FILE
+     echo -e " $R ERROR: code running with root access $N " | tee -a $LOG_FILE
      exit 1
 else
-    echo  -e "$G you are running with root access $N"| tee -a $LOG_FILE
+    echo -e " $G you are running with root access $N "| tee -a $LOG_FILE
 fi
 
 VALIDATE(){
 if [ $1 -eq 0 ]
 then
-     echo -e "Installing $2 is $G success $N" | tee -a $LOG_FILE
+     echo -e "Installing $2 is $G success $N " | tee -a $LOG_FILE
  else
-      echo  -e "Installing $2 is $R failed $N" | tee -a $LOG_FILE
+      echo -e "Installing $2 is $R failed $N " | tee -a $LOG_FILE
       exit 1
 fi 
 
@@ -41,7 +41,7 @@ dnf install nginx -y&>>$LOG_FILE
 VALIDATE $? "NGINX"
 
 else 
-   echo " $Y NGINX is already installed....don't do anything $N" | tee -a $LOG_FILE
+   echo -e " $Y NGINX is already installed....don't do anything $N" | tee -a $LOG_FILE
 fi
 
 
@@ -55,7 +55,7 @@ then
     VALIDATE $? "MYSQL"
 
 else
-       echo " $Y MYSQL is already installed.nothing do $N" | tee -a $LOG_FILE
+       echo -e" $Y MYSQL is already installed.nothing do $N" | tee -a $LOG_FILE
  fi
 
 dnf installed python3&>>$LOG_FILE
@@ -66,5 +66,5 @@ dnf install python3 -y&>>$LOG_FILE
 VALIDATE $? "PYTHON3"
 
 else
-     echo " $Y PYTHON3 is already installed ...nothiong do $N" | tee -a $LOG_FILE
+     echo -e " $Y PYTHON3 is already installed ...nothiong do $N" | tee -a $LOG_FILE
      fi    
