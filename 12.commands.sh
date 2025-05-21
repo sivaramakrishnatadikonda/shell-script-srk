@@ -11,3 +11,13 @@ else
 
 fi
 
+dnf list install nginx
+
+if [ $? -ne 0 ]
+then 
+    echo "NGNIX is not installed ..... please installed"
+
+else
+    echo "NGINX is installed ....... successfully"
+
+fi

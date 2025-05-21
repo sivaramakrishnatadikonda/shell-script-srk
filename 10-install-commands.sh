@@ -25,7 +25,7 @@ then
 if [ $? -eq 0 ]
 then
     echo "Inatalling the NGINX ....SUCCESSFULLY"
-    #exit 0
+    
 
 else 
      echo "Installing NGINX ..... FAILED"
