@@ -25,11 +25,12 @@ fi
 }
 
 dnf list install nginx
+dnf module list nodejs
 
 if [ $? -ne 0 ]
 then 
     echo "NGNIX is not installed ..... please installed"
-
+   echo "NODEJS is not installed ..... please installed"
 dnf install nginx -y
 VALIDATE $? "NGINX"
 
