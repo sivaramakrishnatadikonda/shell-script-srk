@@ -49,3 +49,13 @@ else
     
 fi
 
+dnf install mongodb -y
+
+VALIDATE $? "MONGODB"
+
+if [ $? -eq 0 ]
+then
+    echo "MONGODB installed sucessfully"
+else
+    echo "MONGODB is already installed nothing to do"
+fi 
