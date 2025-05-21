@@ -55,7 +55,7 @@ then
     VALIDATE $? "MYSQL"
 
 else
-       echo -e" $Y MYSQL is already installed.nothing do $N " | tee -a $LOG_FILE
+       echo -e " $Y MYSQL is already installed.nothing do $N " | tee -a $LOG_FILE
  fi
 
 dnf installed python3&>>$LOG_FILE
