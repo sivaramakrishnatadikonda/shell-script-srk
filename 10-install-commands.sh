@@ -7,7 +7,7 @@ then
      echo "ERROR: code running with root access"
      exit 1
 else
-    echo "you are running with root access"
+    echo "you are code  running with root access"
 fi
 
 
