@@ -3,8 +3,8 @@ number2=200
 sum=$(($number1+$number2))
 echo "PRINT SUM DATA IS : $sum "
 
-NUMBER3=$5
-NUMBER4=$6
-ADDITION=$(($5*$6))
+NUMBER3=14
+NUMBER4=14
+ADDITION=$(($NUMBER3*$NUMBER4))
 echo "PRINT ADDITIN DATA IS :$ADDITION"
 
