@@ -1,5 +1,5 @@
 #!/bin/bash
 echo "enter your pin number :"
-read -s  PIN
+read  PIN
 echo "your pin is :$PIN"
- echo "Pin data is sucessfully added"
+ echo "Pin data added sucessfully "
