@@ -49,7 +49,7 @@ else
     
 fi
 
-dnf install mongodb -y
+dnf install mongodb-org -y 
 
 VALIDATE $? "MONGODB"
 
