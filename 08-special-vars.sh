@@ -9,3 +9,4 @@ echo "home directory: $HOME"
 echo "pid: $$"
 sleep 10 &
 echo "backgroud pid: $!"
+echo "exit status code: $?"
