@@ -17,10 +17,20 @@ dnf list install nginx
 if [ $? -ne 0 ]
 then 
     echo "NGNIX is not installed ..... please installed"
-    exit 1
-    
+
+dnf install nginx -y
+
+if [ $? -eq 0 ]
+then
+   echo "NGINX installation ......SUCESSFULLY"
+
+   else
+       echo "NGINX installation .... FAILED"
+       exit 1
+   fi     
+
 
 else
-    echo "NGINX is installed ....... successfully"
+    echo "NGINX is already  installed ....... nothing to do"
 
 fi
