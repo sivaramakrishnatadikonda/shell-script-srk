@@ -16,9 +16,9 @@ VALIDATE(){
 
 if [ $1 -eq 0 ]
 then 
-    echo  "Installed $4 is sucessfully"
+    echo  "Installed $2 is sucessfully"
 else  
-    echo "Installation $4 is failed"
+    echo "Installation $2 is failed"
     exit 1
 fi
 
@@ -33,8 +33,8 @@ then
    echo "NGINX installation ......SUCESSFULLY"
 
    else
-       echo "NGINX installation .... FAILED"
-       exit 1
+       echo "NGINX already installed nothing to do"
+       
    fi     
 
 
@@ -46,8 +46,7 @@ if [ $? - eq 0 ]
 then 
   echo "MONGODB installation is successfully"
 else
-   echo "MONGODB installatioon is failed"
-   exit 1
+   echo "MONGODB already installed nothing to do"
 fi
 
 dnf install nodejs -y
@@ -58,7 +57,7 @@ if [ $? -eq 0 ]
 then
     echo "NODEJS installed sucessfully"
 else 
-    echo "NODEJS installation is failed"
-    exit 1
+    echo "NODEJS already installed nothing to do"
+    
 fi
 
