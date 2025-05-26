@@ -26,16 +26,16 @@ fi
 
 }
 
-dnf list installed nginx
+dnf list installed nodejs
 
 if [ $? -ne 0 ]
 then 
-   echo "Nginx is not installed please installed" 
-dnf install nginx -y
-VALIDATE $? "NGINX"
+   echo "Nodejs is not installed please installed" 
+dnf install nodejs -y
+VALIDATE $? "Nodejs"
 
 else 
-   echo -e " $Y NGINX is already installed....don't do anything $N "
+   echo -e " $Y Nodejs is already installed....don't do anything $N "
 fi
 
 
