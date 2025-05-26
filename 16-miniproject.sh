@@ -1,6 +1,7 @@
 #!/bin/bash
 
 USERID=$(id -u)
+
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
@@ -37,7 +38,7 @@ dnf install mysql -y
 
 VALIDATION $? "please install mysql"
 else
-    echo -e " $Y mysql is already install nothing to do $N"  
+    echo -e " $Y mysql is already install nothing to do $N "  
 
 fi
 
