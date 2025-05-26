@@ -28,10 +28,12 @@ fi
 
 }
 
-dnf install mysql -y
+
 if [ $? -eq 0 ]
 then 
     echo "mysql is not installed please install"
+
+dnf install mysql -y
 
 VALIDATION $? "please install mysql"
 else
