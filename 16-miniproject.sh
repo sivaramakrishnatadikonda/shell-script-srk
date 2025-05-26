@@ -29,14 +29,14 @@ fi
 
 }
 
-dnf install mysql -y
+dnf install nginx -y
 if [ $? -eq 0 ]
 then 
-    echo "mysql is not installed please install"
+    echo "nginx is not installed please install"
 
-VALIDATION $? "mysql"
+VALIDATION $? "nginx"
 else
-    echo -e " $Y mysql is already install nothing to do $N "  
+    echo -e " $Y nginx is already install nothing to do $N "  
 exit 1
 fi
 
