@@ -15,7 +15,7 @@ else
 
 fi 
 
-dnf install mysql -y
+dnf install mysasdwaf -y
 if [ $? -eq 0 ]
 
 then
