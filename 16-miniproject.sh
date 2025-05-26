@@ -9,36 +9,33 @@ N="\e[0m"
 
 if [ $USERID -ne 0 ]
 then
-    echo -e " $R ERROR:: please code running the root user $N "
-    exit 1
+     echo -e " $R ERROR: code running with root access $N " 
+     exit 1
 else
-    echo "your are code running the root user"
-
-fi 
-
-VALIDATION(){
-if [ $1 -eq 0 ]
-
-then
-    echo -e "Installation of $2 ------ $G Sucessfully $N "
-
-else
-    echo -e "Installation of $2 ------ $R Failed $N "
-   exit 1
+    echo -e " $G you are running with root access $N " 
 fi
+
+VALIDATE(){
+if [ $1 -eq 0 ]
+then
+     echo -e "Installing $2 is $G success $N " 
+ else
+      echo -e "Installing $2 is $R failed $N " 
+      exit 1
+fi 
 
 }
 
-dnf list install nginx
-if [ $? -eq 0 ]
+dnf list installed nginx
+
+if [ $? -ne 0 ]
 then 
-    echo "nginx is not installed please install"
-   dnf install nginx -y
-   VALIDATION $? "nginx"
+   echo "Nginx is not installed please installed" 
+dnf install nginx -y
+VALIDATE $? "NGINX"
 
-else
-    echo -e " $Y nginx is already install do not do nothing  $N "  
-
+else 
+   echo -e " $Y NGINX is already installed....don't do anything $N "
 fi
 
 
