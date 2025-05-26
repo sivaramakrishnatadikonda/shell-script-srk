@@ -28,9 +28,9 @@ VALIDATE(){
 
 if [ $1 -eq 0 ]
 then 
- echo "INSTALLING $2 IS  ------ $G SUCESSFULLY $N " 
+ echo -e "INSTALLING $2 IS  ------ $G SUCESSFULLY $N " | tee -a $LOG_FILE
 else 
-    echo "INSTALLING $2 IS  ----- $R FAILED $N " 
+    echo -e  "INSTALLING $2 IS  ----- $R FAILED $N " | tee -a $LOG_FILE
     exit 1
 fi 
 }
@@ -41,10 +41,10 @@ dnf module list $packages &>> LOG_FILE
 
 if [ $? -eq 0 ]
 then 
-  echo " $packages IS NOT INSTALLED PLEASE INSTALLED" | tee -a $LOG_FILE
+  echo  " $packages IS NOT INSTALLED PLEASE INSTALLED" | tee -a $LOG_FILE
 dnf install $packages -y
 VALIDATE $? "$packages"
 else 
-   echo " $packages IS ALREADY INSTALLED NOTHING TO DO" | tee -a $LOG_FILE
+   echo  -e " $Y $packages IS ALREADY INSTALLED NOTHING TO DO $N " | tee -a $LOG_FILE
 fi 
 done
