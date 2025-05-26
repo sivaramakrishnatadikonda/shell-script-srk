@@ -37,8 +37,8 @@ dnf list installed nodejs
 if [ $? -eq 0 ]
 echo " $package is not installed please installed" | tee -a $LOG_FILE
 dnf install nodejs -y&>>LOG_FILE
-VALIDATE $? "Nodejs"
-else 
+VALIDATE $? "$package"
+ else 
    echo -e " $Y $package is already installed....don't do anything $N " | tee -a $LOG_FILE
 fi
 done
