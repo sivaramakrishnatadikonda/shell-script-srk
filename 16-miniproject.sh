@@ -33,14 +33,14 @@ else
 fi 
 }
 
-for packages in $@ &>>LOG_FILE
+for packages in $@ 
 do 
-dnf module list nodejs &>> LOG_FILE
+dnf module list $packages &>> LOG_FILE
 
 if [ $? -eq 0 ]
 then 
   echo " $packages IS NOT INSTALLED PLEASE INSTALLED" | tee -a $LOG_FILE
-
+dnf install $packages -y
 VALIDATE $? "$packages"
 else 
    echo " $packages IS ALREADY INSTALLED NOTHING TO DO" | tee -a $LOG_FILE
