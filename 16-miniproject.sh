@@ -29,7 +29,7 @@ fi
 
 }
 
-dnf install mysqlqewr -y
+dnf install mysql -y
 if [ $? -eq 0 ]
 then 
     echo "mysql is not installed please install"
