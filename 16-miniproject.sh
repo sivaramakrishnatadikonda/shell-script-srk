@@ -29,15 +29,15 @@ fi
 
 }
 
-dnf install nginx -y
+dnf list install nginx
 if [ $? -eq 0 ]
 then 
     echo "nginx is not installed please install"
-
+dnf install nginx -y
 VALIDATION $? "nginx"
 else
     echo -e " $Y nginx is already install nothing to do $N "  
-exit 1
+
 fi
 
 
