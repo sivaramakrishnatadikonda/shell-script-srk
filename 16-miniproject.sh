@@ -9,13 +9,13 @@ N=\e[0m
 if [ $USERID -ne 0 ]
 then
     echo -e " $R ERROR:: please code running the root user $N "
-   
+    exit 1
 else
     echo "your are code running the root user"
 
 fi 
 
-dnf install mysasdwaf -y
+dnf install mysql -y
 if [ $? -eq 0 ]
 
 then
@@ -23,5 +23,5 @@ then
 
 else
     echo -e "Installation of mysql ------ $R Failed $N "
-    exit 1
+   
 fi
