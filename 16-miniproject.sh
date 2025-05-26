@@ -23,5 +23,15 @@ then
 
 else
     echo -e "Installation of mysql ------ $R Failed $N "
-   
+   exit 1
 fi
+
+dnf install nginx
+if [ $? -eq 0 ]
+then  
+    echo "Inatalling the nginx ------Scessfully"
+else
+    echo "Instalation of nginx ---Failed"
+
+    exit 1
+fi 
