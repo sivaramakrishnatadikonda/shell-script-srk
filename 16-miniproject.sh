@@ -15,23 +15,20 @@ else
 
 fi 
 
-dnf install mysql -y
-if [ $? -eq 0 ]
+VALIDATION(){
+if [ $1 -eq 0 ]
 
 then
-    echo -e "Installation of mysql ------ $G Sucessfully $N "
+    echo -e "Installation of $2 ------ $G Sucessfully $N "
 
 else
-    echo -e "Installation of mysql ------ $R Failed $N "
+    echo -e "Installation of $2 ------ $R Failed $N "
    exit 1
 fi
 
-dnf install nginx
-if [ $? -eq 0 ]
-then  
-    echo "Inatalling the nginx ------Scessfully"
-else
-    echo "Instalation of nginx ---Failed"
+}
 
-    exit 1
-fi 
+dnf install mysql -y
+VALIDATION $? "Installing mysql"
+
+
