@@ -1,15 +1,17 @@
 #?/bin/bash
 
 USERID=$(id -u)
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
+
 LOG_FOLDER="/var/log/miniporject-logs"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOG_FILE="$LOG_FOLDER/$SCRIPT_NAME.log"
 PACKAGE=( "mysql" "nodejs" "python3" )
 
-R="\e[31m"
-G="\e[32m"
-Y="\e[33m"
-N="\e[0m"
+
 
 mkdir -p $LOG_FOLDER
 
