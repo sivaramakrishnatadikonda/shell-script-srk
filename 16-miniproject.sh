@@ -9,7 +9,7 @@ N=\e[0m
 if [ $USERID -ne 0 ]
 then
     echo -e " $R ERROR:: please code running the root user $N "
-    exit 1
+   
 else
     echo "your are code running the root user"
 
