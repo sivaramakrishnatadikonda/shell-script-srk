@@ -14,7 +14,7 @@ N="\e[0m"
 mkdir -p $LOG_FOLDER
 
 
-if [ $USERID -nq 0 ]
+if [ $USERID -ne 0 ]
 then 
   echo " $R ERROR :: $N  please run the script in root access"
   exit 1
@@ -33,9 +33,9 @@ else
 fi 
 }
 
-for packages in $@&>>LOG_FILE
+for packages in $@ &>>LOG_FILE
 do 
-dnf module list nodejs&>> LOG_FILE
+dnf module list nodejs &>> LOG_FILE
 
 if [ $? -eq 0 ]
 then 
